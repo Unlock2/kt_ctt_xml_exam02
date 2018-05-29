@@ -7,22 +7,22 @@ import java.sql.Statement;
 
 public class connect {
 	
-	public static Connection conn = null;
-	public static Statement stmt = null;
-	public static ResultSet rs = null;
-	
-	public static void dbconn() {
-		
+	Connection conn = null;
+	ResultSet rs = null;
+	Statement stmt = null;
+
+	{
 		try {
 			Class.forName("org.mariadb.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/kt_api", "root" , "1234");
+			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/kt_api", "root", "1234");
 			
-		} catch (ClassNotFoundException e) {
+//			System.out.println("DB 연결이 완료되었습니다. ^^");
+			
+		}catch (Exception e) {
 			e.printStackTrace();
+			System.out.println("DB연결에 실패하였으니 확인해 주세요! :D");
 		}
-				
 		
-		
-	}
-	
+
+	}	
 }
