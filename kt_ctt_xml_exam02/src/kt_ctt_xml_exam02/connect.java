@@ -20,12 +20,7 @@ public class connect {
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-		
-		
-		
-		
-		
-		
+				
 		
 		
 	}
